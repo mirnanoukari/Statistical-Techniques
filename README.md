@@ -11,43 +11,48 @@ In a research program on human health risk from recreational contact with water 
 1. The conditional distribution of X given θ is a binomial distribution with parameters n and θ. We can denote this as X ~ Bin(n, θ).
 
    In this case, n = 116 (the total number of one-liter water samples) and x = 17 (the number of samples containing Giardia cysts). Therefore, the distribution of X given θ is:
-   $$
-   X | θ ~ Bin(116, θ) 
-   $$
+   
+$$
+X | θ ~ Bin(116, θ) 
+$$
 
-   $$
-   \frac{116!}{x!(116-x)!}\theta^x (1-\theta)^{116-x}
-   $$
+$$
+\frac{116!}{x!(116-x)!}\theta^x (1-\theta)^{116-x}
+$$
 
    
 
 2. We are given that the prior distribution of θ follows a β distribution. Let $\alpha$ and $\beta$ be the parameters of this beta distribution. We are also given the prior mean and standard deviation of $\theta$ as follows:
 
-   
-   $$
-   Prior \space mean= E(θ)=\frac{\alpha}{α+β}=0.2
-   $$
 
-   $$
-   Prior\space standard \space deviation = \sigma = \sqrt{\frac{αβ}{(α+β)^2(α+β+1)}}=0.16\\
-   Var(\theta) = \sigma ^2
-   $$
+$$
+Prior \space mean= E(θ)=\frac{\alpha}{α+β}=0.2
+$$
 
-   
-
-   We can solve these equations to get two equations in two unknowns:
-   $$
-   \frac{\alpha}{α+β}=0.2 \\
-   
-   \frac{αβ}{(α+β)^2(α+β+1)}=0.16^2
-   $$
-   Solving this system of equations we get:
+$$
+Prior\space standard \space deviation = \sigma = \sqrt{\frac{αβ}{(α+β)^2(α+β+1)}}=0.16\\
+Var(\theta) = \sigma ^2
+$$
 
    
-   $$
-   \alpha= 1,  \beta = 4
-   $$
-   (rounded to the nearest integer).
+
+We can solve these equations to get two equations in two unknowns:
+   
+$$
+\frac{\alpha}{α+β}=0.2 
+$$
+
+$$
+\frac{αβ}{(α+β)^2(α+β+1)}=0.16^2
+$$
+
+Solving this system of equations we get:
+
+$$
+\alpha= 1,  \beta = 4
+$$
+
+(rounded to the nearest integer).
 
 3. Using Bayes' theorem and the prior and conditional distributions derived above, we can find the posterior distribution of θ:
 
@@ -58,19 +63,28 @@ h(θ∣X)∝f(X∣θ)g(θ)\\
 $$
 
 Thus, the posterior distribution of θ is a Beta distribution with parameters x + α and n - x + β:
+
 $$
 h(θ∣X)∼Beta⁡(x+α,n−x+β)h(θ∣X)∼Beta(x+α,n−x+β)
 $$
+
 Substituting the values of n, x, α, and β, we get 
+
 $$
 h(θ|X) ~ Beta(18, 103)
 $$
+
 The posterior mean and standard deviation can be calculated as follows:
+
 $$
-μ=n+α+βx+α=0.15\\
+μ=n+α+βx+α=0.15
+$$
+
+$$
 σ=(n+α+β)^2(n+α+β+1)(x+α)(n−x+β)
 ≈0.03
 $$
+
 Therefore, the posterior mean of θ is 0.15 and the posterior standard deviation is approximately 0.03.
 
 
@@ -78,11 +92,12 @@ Therefore, the posterior mean of θ is 0.15 and the posterior standard deviation
 4. We can see that the prior distribution has most of its mass between 0 and 0.5. The likelihood  distribution is centered around 0.15, which is the maximum likelihood  estimate of theta given the data, and has a narrow spread due to the  relatively large sample size. The posterior distribution is a  combination of the prior and the likelihood, and is centered around  0.16, which is closer to the likelihood than the prior. The posterior distribution is also narrower than the prior, indicating that the data has provided additional information about the parameter.
 
 5. To compute the probability that θ < 0.1 we need to compute the integral on an interval (0, 0.1) of the posterior function:
-   $$
-   P(θ<0.1)=∫_0^{0.1}h(θ∣X)dθ\\
-   P(θ<0.1)=∫_0^{0.1} \frac{θ^{17}(1−θ)^{102}}{B(18,103)}dθ\\
-   P(θ < 0.1) ≈ 0.0528
-   $$
+
+$$
+P(θ<0.1)=∫_0^{0.1}h(θ∣X)dθ\\
+P(θ<0.1)=∫_0^{0.1} \frac{θ^{17}(1−θ)^{102}}{B(18,103)}dθ\\
+P(θ < 0.1) ≈ 0.0528
+$$
 
 6. To find the central 95% posterior credible interval for θ, we need to find the values of θ for which the area under the posterior distribution is 0.95, i.e., the interval that contains 95% of the posterior probability.
 
