@@ -4,6 +4,9 @@
 ###### Mirna Alnoukari - B19-RO-01
 
 
+![GIF](animated.gif)
+
+
 ## Task 1
 
 In a research program on human health risk from recreational contact with water contaminated with pathogenic microbiological material, the National Institute of Water and Atmosphere (NIWA) instituted a study to determine the quality of NZ stream water at a variety of catchment types. This study is documented in McBride et al. (2002) where n = 116 one-liter water samples from sites identified as having a heavy environmental impact from birds (seagulls) and waterfowl. Out of these samples, x = 17 samples contained Giardia cysts. Let θ denote the true probability that a one-liter water sample from this type of site contains Giardia cysts.
