@@ -3,10 +3,6 @@
 
 ###### Mirna Alnoukari - B19-RO-01
 
-
-![GIF](animated.gif)
-
-
 ## Task 1
 
 In a research program on human health risk from recreational contact with water contaminated with pathogenic microbiological material, the National Institute of Water and Atmosphere (NIWA) instituted a study to determine the quality of NZ stream water at a variety of catchment types. This study is documented in McBride et al. (2002) where n = 116 one-liter water samples from sites identified as having a heavy environmental impact from birds (seagulls) and waterfowl. Out of these samples, x = 17 samples contained Giardia cysts. Let θ denote the true probability that a one-liter water sample from this type of site contains Giardia cysts.
@@ -23,7 +19,6 @@ $$
 \frac{116!}{x!(116-x)!}\theta^x (1-\theta)^{116-x}
 $$
 
-   
 
 2. We are given that the prior distribution of θ follows a β distribution. Let $\alpha$ and $\beta$ be the parameters of this beta distribution. We are also given the prior mean and standard deviation of $\theta$ as follows:
 
@@ -126,9 +121,9 @@ The central 95% posterior credible interval for θ is (0.09138957252823, 0.21710
 
 
 
-
-
 ## Task 2
+
+![GIF](animated.gif)
 
 #### Introduction
 
@@ -138,10 +133,7 @@ The goal of this task is to find the optimal path for the salesman  problem for 
 
 To visualize the cities and their positions on a map, Basemap library is used, and Russia coordinates are loaded from a file. The city  coordinates are plotted on the map, and the initial random path is also  plotted.
 
-![](C:\Users\Mouhib\Downloads\1_sa.png)
-
 #### Simulated Annealing
-
 Implementing the simulated annealing optimization technique to solve the Traveling Salesman Problem (TSP).
 
 The inputs are:
@@ -170,11 +162,7 @@ The values are:
 - **Slow cooling = 0.99**
 
 
-
 #### Comparing the optimization result
-
-![](C:\Users\Mouhib\Downloads\compare.png)
-
 From the results, we can conclude that the simulated annealing algorithm's performance depends on the cooling rate. If we choose a high cooling rate, the algorithm explores a large area of the search space, resulting in a low final path length, but the algorithm's execution time is very short. On the other hand, if we choose a small cooling rate, the algorithm explores a smaller area of the search space, resulting in a higher final path length, but the algorithm's execution time is much longer.
 
 In this case, the slow cooling rate gave the best result with the smallest final path length of 22363.01 km, but at the cost of a much longer execution time of 0.92 seconds. The fast cooling rate gave the fastest execution time of 0.04 seconds, but at the cost of a higher final path length of 40280.23 km. The middle cooling rate resulted in a final path length of 44379.65 km with an execution time of 0.08 seconds.
